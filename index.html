@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+</head>
+<body>
+	<div id="vue-app">
+		<div v-bind:class="{bottle:!flag,change:flag}"></div>
+		<!--	是冒号冒号冒号！！！！不是等于号！！！！-->		
+		<div id="bor">
+			<div v-bind:style="{ width : length +'%'}"></div>
+		</div>
+		<div id="but">
+			<button v-on:click="hit" v-show="!flag">hit</button>
+			<button v-on:click="res">restart</button>
+		</div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.21/dist/vue.js"></script>
+	<script src="app.js"></script>
+</body>
+</html>
