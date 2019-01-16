@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>vue导航条</title>
+    <style>
+    #tab{
+        width: 600px;
+        margin: 100px auto;
+    }
+    .nav{
+        font-size: 0;
+        width: 600px;
+    }
+    .nav a{
+        display: inline-block;
+        height: 40px;
+        line-height: 40px;
+        font-size: 16px;
+        width: 25%;
+        text-align: center;
+        background: #F4C1B1;
+        color: #fff;
+        text-decoration: none;
+    }
+    .nav .active{
+        background-color: #E58661;
+        color: #fff;
+    }
+    .info{
+        background-color: #fcfbfd;
+        height: 300px;
+        width: 596px;
+        border: 2px #C7D688 solid;
+        border-top:none;
+    }
+    </style>
+</head>
+<body>
+    <div  id="tab">
+        <div class="nav">
+         <a href="#" @click="linkId=0":class="{'active':linkId===0}">标题1</a>   
+         <a href="#" @click="linkId=1":class="{'active':linkId===1}">标题2</a>
+         <a href="#" @click="linkId=2":class="{'active':linkId===2}">标题3</a>    
+         <a href="#" @click="linkId=3":class="{'active':linkId===3}">标题4</a>   
+        </div>
+        <div class="info">
+            <div v-show="linkId===0">我的第一个标题中的内容</div>
+            <div v-show="linkId===1">标题2</div>
+            <div v-show="linkId===2">标题3</div>
+            <div v-show="linkId===3">标题4</div>
+        </div>
+        
+    </div>
+
+</body>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.5.21/dist/vue.js"></script>
+<script>
+        new Vue({
+            el: '#tab',
+            data: {
+                linkId: 0
+            },
+            computed: {},
+            methods: {},
+            mounted: function () {
+            }
+        })
+    </script>
+</html>
